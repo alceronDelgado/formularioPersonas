@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +13,59 @@
     </div>
 
     <div class="container">
+        <form action="src/querys/registrarPersona.php" method="post">
+            <label for="">Cedula</label>
+            <input type="number" name="cedula" id="">
+            <label for="">Nombre</label>
+            <input type="text" name="nombre" id="">
+            <label for="">apellido</label>
+            <input type="text" name="apellido" id="">
+            <input type="submit" value="enviar">
+        </form>
+    </div>
+
+    <div class="respond">
+        <span> RESPUESTA:
+            <?php 
+
+            if(isset($_SESSION['mensaje'])){
+
+                echo $_SESSION['mensaje'];   
+            }
+
+            session_destroy();
+
+            ?>
         
+        </span>
+    </div>
+
+    <div class="view">
+        <table>
+            <td>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </td>
+            <td>
+                <th>
+                    <?php
+                        if(isset($_SESSION['result'])){
+                            for ($i=0; $i < COUNT($_SESSION['result']); $i++) { 
+                                echo $_SESSION['result'];
+                            }
+
+                        }
+                
+                    ?>
+                </th>
+                <th></th>
+                <th></th>
+            </td>
+        </table>
     </div>
     
 </body>
 </html>
+
+

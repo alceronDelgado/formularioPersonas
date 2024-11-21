@@ -5,10 +5,10 @@ $password = "";
 $server = "localhost";
 $db = "formulariopersonas";
 
-$query = mysqli_connect($server,$user,$password,$db);
+$conn = mysqli_connect($server,$user,$password,$db);
 
-if($query){
-    echo "Conexión exitosa";
+if($conn){
+    //echo "Conexión exitosa";
 }else{
     die(1);
 }
