@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,12 +51,14 @@
             <td>
                 <th>
                     <?php
-                        if(isset($_SESSION['result'])){
-                            for ($i=0; $i < COUNT($_SESSION['result']); $i++) { 
-                                echo $_SESSION['result'];
-                            }
+                        // if(isset($_SESSION['result'])){
+                        //     while(true){
+                        //         echo $_SESSION['result']['ced'];
 
-                        }
+
+                        //     }
+
+                        // }
                 
                     ?>
                 </th>
