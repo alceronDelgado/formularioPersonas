@@ -49,19 +49,6 @@
                 <th>C</th>
             </td>
             <td>
-                <th>
-                    <?php
-                        // if(isset($_SESSION['result'])){
-                        //     while(true){
-                        //         echo $_SESSION['result']['ced'];
-
-
-                        //     }
-
-                        // }
-                
-                    ?>
-                </th>
                 <th></th>
                 <th></th>
             </td>
