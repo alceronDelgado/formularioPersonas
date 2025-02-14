@@ -1,18 +1,18 @@
 <?php 
 
-$user = "root";
-$password = "";
-$server = "localhost";
-$db = "formulariopersonas";
+$user = 'root';
+$password = '';
+$dbname = 'personasbd';
+$host = 'localhost';
 
-$conn = mysqli_connect($server,$user,$password,$db);
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname",$user,$password);
+    
+    $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-if($conn){
-    //echo "Conexión exitosa";
-}else{
-    die(1);
+    
+} catch (PDOException $e) {
+    echo $e->getMessage();
 }
-
-
 
 ?>
